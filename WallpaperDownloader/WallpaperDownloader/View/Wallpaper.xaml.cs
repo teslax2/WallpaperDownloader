@@ -45,6 +45,8 @@ namespace WallpaperDownloader.View
             prevButton.Opacity = (100.0 - positionX)/100.0;
             nextButton.Opacity = (100.0 - (this.Width - positionX))/100.0;
 
+            var tile = e.OriginalSource as UIElement;
+            
         }
 
         private async void nextButton_Click(object sender, RoutedEventArgs e)

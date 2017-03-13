@@ -30,6 +30,18 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Image.Triggers>
+            <!--<Image.Style>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="1"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Panel.ZIndex" Value="0"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>-->
             <Image.RenderTransform>
                 <ScaleTransform x:Name="ImageScaleTransform"
                                 ScaleX="1" ScaleY="1"/>
