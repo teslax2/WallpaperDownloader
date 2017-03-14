@@ -18,13 +18,19 @@ namespace WallpaperDownloader.ViewModel
         private readonly ObservableCollection<FrameworkElement> _sprites = new ObservableCollection<FrameworkElement>();
         public INotifyCollectionChanged Sprites { get { return _sprites; } }
         private Dictionary<AnimatedTile, string> _tiles = new Dictionary<AnimatedTile, string>();
-        private int _pageNumber = 1;
+        private int _pageNumber;
 
         private Wallhaven model = new Wallhaven();
-        private const string website = "https://alpha.wallhaven.cc/search?categories=111&purity=110&sorting=views&order=desc&page=";
+        private WallhavenSettings modelSettings;
+        private readonly string website;
+        private readonly string _downloadPath;
 
         public WallpaperDownloaderViewModel()
         {
+            LoadSettings();
+            website = modelSettings.WebsiteAddress;
+            _pageNumber = modelSettings.DefaultPage;
+            _downloadPath = modelSettings.SaveFolder;
         }
 
         private void OnPropertyChanged(string property)
@@ -74,7 +80,17 @@ namespace WallpaperDownloader.ViewModel
         public void DownloadImage(string path)
         {
             var hdLink = model.GetHdLink(path);
-            model.DownloadImage(hdLink);
+            model.DownloadImage(hdLink,_downloadPath);
+        }
+
+        public void SaveSettings()
+        {
+            WallhavenSettings.Save(modelSettings);
+        }
+
+        public void LoadSettings()
+        {
+            modelSettings = WallhavenSettings.Load();
         }
     }
 }

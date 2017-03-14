@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AngleSharp;
+using System.IO;
 
 namespace WallpaperDownloader.Model
 {
@@ -80,14 +81,16 @@ namespace WallpaperDownloader.Model
             return thumb.Replace("thumb/small/th", "full/wallhaven");   
         }
 
-        public void DownloadImage(string path)
+        public void DownloadImage(string Remotepath, string LocalPath)
         {
             try
             {
-                System.Diagnostics.Debug.WriteLine("***********" + path);
-                var lastSlash = path.LastIndexOf("/");
-                var fileName = path.Substring(lastSlash + 1);
-                webclient.DownloadFileAsync(new Uri(path), fileName);
+                System.Diagnostics.Debug.WriteLine("***********" + Remotepath);
+                var lastSlash = Remotepath.LastIndexOf("/");
+                var fileName = Remotepath.Substring(lastSlash + 1);
+                if (!Directory.Exists(LocalPath))
+                    Directory.CreateDirectory(LocalPath);
+                webclient.DownloadFileAsync(new Uri(Remotepath), LocalPath+fileName);
             }
             catch (Exception e)
             {

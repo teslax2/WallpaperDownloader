@@ -81,3 +81,6 @@ C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\Wal
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csproj.GenerateResource.Cache
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.exe
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.pdb
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\settings.json
