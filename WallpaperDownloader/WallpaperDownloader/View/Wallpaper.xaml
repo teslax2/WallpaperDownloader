@@ -13,9 +13,21 @@
         <ItemsControl DataContext="{StaticResource ViewModel}" ItemsSource="{Binding Path=Sprites}" MouseDown="ItemsControl_MouseDown" MouseMove="ItemsControl_MouseMove">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel Background="Black" x:Name="WrapPanel"/>
+                    <WrapPanel Background="Black"/>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="UserControl">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="99" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Panel.ZIndex" Value="0" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
         </ItemsControl>
         <Button x:Name="prevButton" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Center" Width="17" Height="46" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" BorderThickness="0" Opacity="0" Click="prevButton_Click"/>
         <Button x:Name="nextButton" Content="&gt;" HorizontalAlignment="Right" VerticalAlignment="Center" Width="17" Height="46" Background="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}" BorderThickness="0" Opacity="0" Click="nextButton_Click"/>

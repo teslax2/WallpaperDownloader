@@ -39,3 +39,45 @@ C:\Users\7 Professional\Desktop\WallpaperDownloader\WallpaperDownloader\obj\Debu
 C:\Users\7 Professional\Desktop\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.g.cs
 C:\Users\7 Professional\Desktop\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.baml
 C:\Users\7 Professional\Desktop\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csprojResolveAssemblyReference.cache
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.exe.config
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.exe
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.pdb
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\AngleSharp.dll
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\log4net.dll
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\AngleSharp.xml
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\log4net.xml
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csprojResolveAssemblyReference.cache
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\AnimatedTile.g.cs
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.g.cs
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\App.g.cs
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader_MarkupCompile.cache
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader_MarkupCompile.lref
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\AnimatedTile.baml
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.baml
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.g.resources
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.Properties.Resources.resources
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csproj.GenerateResource.Cache
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.exe
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.pdb
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.exe.config
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.exe
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\WallpaperDownloader.pdb
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\AngleSharp.dll
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\log4net.dll
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\AngleSharp.xml
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\log4net.xml
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csprojResolveAssemblyReference.cache
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\AnimatedTile.g.cs
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.g.cs
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\App.g.cs
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader_MarkupCompile.cache
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader_MarkupCompile.lref
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\AnimatedTile.baml
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\View\Wallpaper.baml
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.g.resources
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.Properties.Resources.resources
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.csproj.GenerateResource.Cache
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.exe
+C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\obj\Debug\WallpaperDownloader.pdb
