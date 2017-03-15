@@ -36,10 +36,18 @@ namespace WallpaperDownloader.Model
             if (Document == null)
                 return null;
 
-            var selectors = Document.GetElementById("thumbs").QuerySelectorAll("img");
-            var elements = selectors.Select(n => (n.Attributes["data-src"].Value)).Distinct().ToList<string>();
+            try
+            {
+                var selectors = Document.GetElementById("thumbs").QuerySelectorAll("img");
+                var elements = selectors.Select(n => (n.Attributes["data-src"].Value)).Distinct().ToList<string>();
 
-            return elements;
+                return elements;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("No such elements on website: " + e.Message);
+                return new List<string>();
+            }
         }
         /// <summary>
         /// changes "https://alpha.wallhaven.cc/wallpapers/thumb/small/th-116915.jpg"  to "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-116915.jpg 
@@ -54,7 +62,7 @@ namespace WallpaperDownloader.Model
             return thumb.Replace("thumb/small/th", "full/wallhaven");   
         }
 
-        public string NextPage()
+        public string GetNextPage()
         {
             PageNumber++;
             return WebAddress + PageNumber;

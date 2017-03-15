@@ -43,7 +43,7 @@ namespace WallpaperDownloader.Model
             string webAddress;
 
             if (Next)
-                webAddress = website.NextPage();
+                webAddress = website.GetNextPage();
             else
                 webAddress = website.PreviousPage();
                

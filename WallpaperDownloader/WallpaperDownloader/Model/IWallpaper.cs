@@ -15,7 +15,7 @@ namespace WallpaperDownloader.Model
 
         List<String> GetThumbLinks();
         string GetHdLink(string thumb);
-        string NextPage();
+        string GetNextPage();
         string PreviousPage();
     }
 }
