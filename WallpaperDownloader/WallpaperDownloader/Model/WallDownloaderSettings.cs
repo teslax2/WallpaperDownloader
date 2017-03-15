@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace WallpaperDownloader.Model
 {
-    class WallhavenSettings
+    class WallDownloaderSettings
     {
         public string SaveFolder { get; set; }
         public string WebsiteAddress { get; set; }
         public int DefaultPage { get; set; }
 
-        public WallhavenSettings() { }
-        public WallhavenSettings(string saveFolder, string websiteAddres, int defaulPage)
+        public WallDownloaderSettings() { }
+        public WallDownloaderSettings(string saveFolder, string websiteAddres, int defaulPage)
         {
             SaveFolder = saveFolder;
             WebsiteAddress = websiteAddres;
             DefaultPage = defaulPage;
         }
 
-        public static void Save(WallhavenSettings settings)
+        public static void Save(WallDownloaderSettings settings)
         {
             try
             {
@@ -36,16 +36,16 @@ namespace WallpaperDownloader.Model
             }
         }
 
-        public static WallhavenSettings Load()
+        public static WallDownloaderSettings Load()
         {
             try
             {
-                return JsonConvert.DeserializeObject<WallhavenSettings>(File.ReadAllText("settings.json"));
+                return JsonConvert.DeserializeObject<WallDownloaderSettings>(File.ReadAllText("settings.json"));
             }
             catch (Exception e)
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
-                return new WallhavenSettings();
+                return null;
             }
         }
     }

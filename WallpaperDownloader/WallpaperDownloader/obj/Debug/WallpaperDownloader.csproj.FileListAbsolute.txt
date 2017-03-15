@@ -84,3 +84,6 @@ C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\Wal
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.dll
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.xml
 C:\Users\7 Professional\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\settings.json
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\settings.json
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\wiesi_000\Source\Repos\WallpaperDownloader\WallpaperDownloader\WallpaperDownloader\bin\Debug\Newtonsoft.Json.xml

@@ -18,18 +18,18 @@ namespace WallpaperDownloader.ViewModel
         private readonly ObservableCollection<FrameworkElement> _sprites = new ObservableCollection<FrameworkElement>();
         public INotifyCollectionChanged Sprites { get { return _sprites; } }
         private Dictionary<AnimatedTile, string> _tiles = new Dictionary<AnimatedTile, string>();
-        private int _pageNumber;
 
-        private Wallhaven model = new Wallhaven();
-        private WallhavenSettings modelSettings;
-        private readonly string website;
+        private WallDownloader model;
+        private WallDownloaderSettings modelSettings;
         private readonly string _downloadPath;
 
         public WallpaperDownloaderViewModel()
         {
-            LoadSettings();
-            website = modelSettings.WebsiteAddress;
-            _pageNumber = modelSettings.DefaultPage;
+            if (LoadSettings())
+                model = new WallDownloader(modelSettings.WebsiteAddress, modelSettings.DefaultPage);
+            else
+                model = new WallDownloader();
+
             _downloadPath = modelSettings.SaveFolder;
         }
 
@@ -40,27 +40,23 @@ namespace WallpaperDownloader.ViewModel
                 propertyChanged(this, new PropertyChangedEventArgs(property));
         }
 
-        public async Task LoadAsync(int page)
+        public async Task LoadAsync(bool Next)
         {
-            await Task.Run(()=>model.LoadPageAsync(website + page));
+            await Task.Run(()=>model.LoadPageAsync(Next));
             var links = model.GetThumbLinks();
-            AddLinks(links);
+            AddTiles(links);
         }
         public async Task LoadAsyncNext()
         {
-            _pageNumber++;
-            await LoadAsync(_pageNumber);
+            await LoadAsync(true);
         }
 
         public async Task LoadAsyncPrev()
         {
-            if(_pageNumber>2)
-                _pageNumber--;
-
-            await LoadAsync(_pageNumber);
+            await LoadAsync(false);
         }
 
-        private void AddLinks(List<string> links)
+        private void AddTiles(List<string> links)
         {
             if (links == null)
                 return;
@@ -85,12 +81,17 @@ namespace WallpaperDownloader.ViewModel
 
         public void SaveSettings()
         {
-            WallhavenSettings.Save(modelSettings);
+            WallDownloaderSettings.Save(modelSettings);
         }
 
-        public void LoadSettings()
+        public bool LoadSettings()
         {
-            modelSettings = WallhavenSettings.Load();
+            modelSettings = WallDownloaderSettings.Load();
+
+            if (modelSettings == null)
+                return false;
+            else
+                return true;
         }
     }
 }

@@ -66,7 +66,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\WallhavenSettings.cs" />
+    <Compile Include="Model\IWallpaper.cs" />
+    <Compile Include="Model\WallDownloader.cs" />
+    <Compile Include="Model\WallDownloaderSettings.cs" />
     <Compile Include="ViewModel\WallpaperDownloaderViewModel.cs" />
     <Compile Include="View\AnimatedTile.xaml.cs">
       <DependentUpon>AnimatedTile.xaml</DependentUpon>

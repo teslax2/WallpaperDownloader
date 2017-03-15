@@ -6,67 +6,40 @@ using System.Net;
 using System.Threading.Tasks;
 using AngleSharp;
 using System.IO;
+using AngleSharp.Dom;
 
 namespace WallpaperDownloader.Model
 {
-    class Wallhaven
+    class Wallhaven:IWallpaper
     {
-        private WebClient webclient;
-        private HtmlParser parser;
-        private AngleSharp.Dom.IDocument document;
-
-        private List<String> _imageLinks;
-        public List<String> ImageLinks { get { return _imageLinks; } protected set { _imageLinks = value; } }
+        public IDocument Document { get; set; }
+        public string WebAddress { get; set; }
+        public int PageNumber { get; set; }
 
         public Wallhaven()
         {
-            webclient = new WebClient();
-            parser = new HtmlParser();
-            _imageLinks = new List<string>();
+            WebAddress = "https://alpha.wallhaven.cc/search?categories=111&purity=110&sorting=favorites&order=desc&page=";
+            PageNumber = 1;
+        }
+
+        public Wallhaven(string webAddress, int pageNumber)
+        {
+            WebAddress = webAddress;
+            PageNumber = pageNumber;
         }
         /// <summary>
-        /// 
+        /// Gets all thumbs from website
         /// </summary>
-        /// <param name="website"></param>
         /// <returns></returns>
-        public async Task LoadPageAsync(string website)
-        {
-            if (webclient == null || parser == null)
-                return;
-
-            try
-            {
-                string source = webclient.DownloadString(website);// https://alpha.wallhaven.cc/search?categories=111&purity=110&sorting=favorites&order=desc&page=2
-                var config = Configuration.Default.WithDefaultLoader();
-                document= await BrowsingContext.New(config).OpenAsync(website);
-            }
-            catch
-            {
-                Console.WriteLine("Cant Load Website");
-            }
-
-        }
-
         public List<string> GetThumbLinks()
         {
-            if (document == null)
+            if (Document == null)
                 return null;
 
-            var selectors = document.GetElementById("thumbs").QuerySelectorAll("img");
-            var elements = selectors.Select(n => (n.Attributes["data-src"].Value)).Distinct();
+            var selectors = Document.GetElementById("thumbs").QuerySelectorAll("img");
+            var elements = selectors.Select(n => (n.Attributes["data-src"].Value)).Distinct().ToList<string>();
 
-
-            if (elements.Count() == 0)
-               return null;
-
-            ImageLinks.Clear();
-                         
-            foreach(var element in elements)
-            {
-                ImageLinks.Add(element);
-                Console.WriteLine(element);
-            }
-            return ImageLinks;
+            return elements;
         }
         /// <summary>
         /// changes "https://alpha.wallhaven.cc/wallpapers/thumb/small/th-116915.jpg"  to "https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-116915.jpg 
@@ -81,21 +54,17 @@ namespace WallpaperDownloader.Model
             return thumb.Replace("thumb/small/th", "full/wallhaven");   
         }
 
-        public void DownloadImage(string Remotepath, string LocalPath)
+        public string NextPage()
         {
-            try
-            {
-                System.Diagnostics.Debug.WriteLine("***********" + Remotepath);
-                var lastSlash = Remotepath.LastIndexOf("/");
-                var fileName = Remotepath.Substring(lastSlash + 1);
-                if (!Directory.Exists(LocalPath))
-                    Directory.CreateDirectory(LocalPath);
-                webclient.DownloadFileAsync(new Uri(Remotepath), LocalPath+fileName);
-            }
-            catch (Exception e)
-            {
-                System.Diagnostics.Debug.WriteLine(e.Message);
-            }
+            PageNumber++;
+            return WebAddress + PageNumber;
+        }
+
+        public string PreviousPage()
+        {
+            if(PageNumber>1)
+                PageNumber--;
+            return WebAddress + PageNumber;
         }
     }
 }
